@@ -4,58 +4,205 @@
     <meta charset="UTF-8">
     <title>explore</title>
   <link href="explore.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+
 </head>
 
-<body style="background-color: black">
-<div class="wd-warp">
-
-<!--A-->
-    <div class=" wd-offset" style="line-height: 3em">
-        <input class="wd-rounded-corner  wd-offset"
-               id="search-input" placeholder="Search Tuiter">
-
-        <a href="explore-settings.html" title="explore settings" >
-            <i class="fa fa-gear wd-gear-icon"></i>
-        </a>
-
-        <div class="wd-float-done"></div>
-    </div>
-<div style="width: 100%; height: 20px; color: dimgray"></div>
-<!--B-->
-    <div>
-        <span class="wd-first-bar-link">For you</span>
-        <span class="wd-bar-link">Trending</span>
-        <span class="wd-bar-link">COVID-19</span>
-        <span class="wd-bar-link">News</span>
-        <span class="wd-bar-link">Sports</span>
-        <span class="wd-bar-link">Entertainment</span>
-    </div>
-<div style="height: 25px"></div>
-<!--C-->
-    <div class="wd-post-noimage">
-        <div class="wd-post-topic-tuitsnum">
-        Trending in Science
+<body>
+<div class="container">
+    <div class="row">
+        <!--right link list-->
+        <div class="col-2 col-xxl-2 col-xl-2 col-lg-1 col-md-2 col-sm-2">
+            <ul class="list-group">
+                <a class="list-group-item" href="">
+                    <div class="row">
+                        <i class="fab fa-twitter col-2"></i>
+                    </div>
+                </a>
+                <a class="list-group-item" href="">
+                    <div class="row">
+                        <i class="fas fa-home col-2"></i>
+                        <span class="d-none d-xl-block col-8">Home</span>
+                    </div>
+                </a>
+                <a class="list-group-item active" href="">
+                    <div class="row">
+                        <i class="fas fa-hashtag col-2"></i>
+                        <span class="d-none d-xl-block col-8">Explore</span>
+                    </div>
+                </a>
+                <a class="list-group-item" href="">
+                    <div class="row">
+                        <i class="fas fa-bell col-2"></i>
+                        <span class="d-none d-xl-block col-8">Notifications</span>
+                    </div>
+                </a>
+                <a class="list-group-item" href="">
+                    <div class="row">
+                        <i class="fas fa-envelope col-2"></i>
+                        <span class="d-none d-xl-block col-8">Messages</span>
+                    </div>
+                </a>
+                <a class="list-group-item" href="">
+                    <div class="row">
+                        <i class="fas fa-bookmark col-2"></i>
+                        <span class="d-none d-xl-block col-8">BookMarks</span>
+                    </div>
+                </a>
+                <a class="list-group-item" href="">
+                    <div class="row">
+                        <i class="fas fa-list col-2"></i>
+                        <span class="d-none d-xl-block col-8">Lists</span>
+                    </div>
+                </a>
+                <a class="list-group-item" href="">
+                    <div class="row">
+                        <i class="fas fa-user col-2"></i>
+                        <span class="d-none d-xl-block col-8">Profile</span>
+                    </div>
+                </a>
+                <a class="list-group-item" href="">
+                    <div class="row">
+                        <i class="fas fa-ellipsis-h col-2"></i>
+                        <span class="d-none d-xl-block col-8">More</span>
+                    </div>
+                </a>
+            </ul>
+            <button class="btn btn-primary">Tweet</button>
         </div>
-        <div class="wd-post-title">Starship</div>
-        <div class="wd-post-topic-tuitsnum">55.5K Tuits</div>
-    </div>
 
-    <div class="wd-post-with-image">
-        <img src="nyt.png" class="wd-post-image">
-        <div class="wd-post-author">The New York Times <span class="wd-post-topic-tuitsnum">Yesterday</span> </div>
-        <div class="wd-post-title">The image is 16px from the right</div>
+<!--        center tweets-->
+        <div class="col-6 col-xxl-6 col-xl-7 col-lg-8 col-md-8 col-sm-8">
+            <div class="wd-warp">
 
-    </div>
-    <div class="wd-post-noimage">
-        <div class="wd-post-topic-tuitsnum">
-            Trending in Science
+                <!--A-->
+                <div class=" wd-offset row" style="line-height: 3em">
+                    <div class="col-10">
+                        <input class="input-control"
+                               placeholder="Search Tuiter">
+                    </div>
+                    <div class="col-2">
+                        <a href="explore-settings.html" title="explore settings" >
+                            <i class="fa fa-cog fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--B-->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" href="#">For You</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">Trending</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">Covid-19</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">News</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">Sports</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">Entertainment</a></li>
+                </ul>
+                <!--C-->
+                <div class="wd-post-noimage">
+                    <div class="wd-post-topic-tuitsnum">
+                        Trending in Science
+                    </div>
+                    <div class="wd-post-title">Starship</div>
+                    <div class="wd-post-topic-tuitsnum">55.5K Tuits</div>
+                </div>
+
+                <div class="wd-post-with-image">
+                    <img src="nyt.png" class="wd-post-image">
+                    <div class="wd-post-author">The New York Times <span class="wd-post-topic-tuitsnum">Yesterday</span> </div>
+                    <div class="wd-post-title">The image is 16px from the right</div>
+
+                </div>
+                <div class="wd-post-noimage">
+                    <div class="wd-post-topic-tuitsnum">
+                        Trending in Science
+                    </div>
+                    <div class="wd-post-title">Starship</div>
+                    <div class="wd-post-topic-tuitsnum">55.5K Tuits</div>
+                </div>
+            </div>
         </div>
-        <div class="wd-post-title">Starship</div>
-        <div class="wd-post-topic-tuitsnum">55.5K Tuits</div>
+
+<!--        left follow list-->
+        <div class="col4 col-xxl-4 col-xl-3 col-lg-3 d-none d-lg-block">
+            <ul class="list-group">
+                <li class="list-group-item">Who to follow</li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="../images/java.png" style="border-radius: 50%; width: 40px; height: 40px">
+                        </div>
+                        <div class="col-7">
+                            Java
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="" style="border-radius: 50%">
+                        </div>
+                        <div class="col-7">
+                            Relative Space
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="" style="border-radius: 50%">
+                        </div>
+                        <div class="col-7">
+                            Virgin Galatic
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="" style="border-radius: 50%">
+                        </div>
+                        <div class="col-7">
+                            NASA
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="" style="border-radius: 50%">
+                        </div>
+                        <div class="col-7">
+                            Tesla
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary">Follow</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-
-
 </div>
+
+
+
+
+
+
+
+
+
 </body>
 </html>
