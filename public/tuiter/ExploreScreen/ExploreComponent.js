@@ -5,8 +5,8 @@ const ExploreComponent = () => {
 <div class="row">
 <!-- search field and cog -->
     <div class="col-10">
-        <input class="input-control rounded-pill"
-               placeholder="    Search Tuiter">
+        <input class="form-control rounded-pill "
+               placeholder="&#128270;   Search Tuiter">
     </div>
     <div class="col-2">
         <a href="explore-settings.html" title="explore settings" >
@@ -15,7 +15,7 @@ const ExploreComponent = () => {
     </div>
 </div>
 
-
+<br>
 <ul class="nav mb-2 nav-tabs">
 <!-- tabs -->
     <li class="nav-item"><a class="nav-link active" href="#">For You</a></li>
@@ -28,9 +28,12 @@ const ExploreComponent = () => {
 
 
 <!-- image with overlaid text -->
-<div class="container">
-    <img src="../../images/falcon.png" class="img-fluid" >
-    <span class="overlay-text">Falcon Heavy<span>
+<div class="card text-white">
+    <img src="../../images/falcon.png" class="card-img">
+    <div class="card-img-overlay position-absolute" style="top: 400px">
+<!--        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+        <h2>Falcon Heavy</h2>
+</div>
 </div>
 
 
