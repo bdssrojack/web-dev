@@ -1,5 +1,7 @@
 [
-    {"avatar": "../../images/falcon.png",
+    {
+        "_id": 1,
+        "avatar": "../../images/falcon.png",
         "userName": "Elon Musk",
         "handle": "elonmusk",
         "time": "23h",
@@ -7,9 +9,10 @@
         "image": "../../images/spaceman.png",
         "essayTitle": "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
         "essayContent": "From training to launch to landing,this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space. &#128279; netflix.com",
-        "comment": "4.2k", "retweet": "3.5k", "like": "37.5k"},
+        "comment": 42, "retweet": 35, "like": 37, "liked": false},
 
-    {"avatar": "../../images/nyp.png",
+    {   "_id": 2,
+        "avatar": "../../images/nyp.png",
         "userName": "New York Post",
         "handle": "nypost",
         "time": "23h",
@@ -17,5 +20,5 @@
         "image": "../../images/grimes.png",
         "essayTitle": "",
         "essayContent": "",
-        "comment": "965", "retweet": "2.4k", "like": "4k"}
+        "comment": 965, "retweet": 24, "like": 4,"liked": false}
 ]

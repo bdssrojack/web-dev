@@ -9,9 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));//this is wher
 
 //<App /> is what do you want to draw
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
