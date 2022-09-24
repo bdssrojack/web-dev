@@ -1,6 +1,6 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import TuitStats from "./tuit-stats";
+// import TuitStats from "./tuit-stats";
 import {deleteTuit, updateTuit} from "../../../actions/tuits_actions";
 
 const PostItem = ({
@@ -25,9 +25,9 @@ const PostItem = ({
     let essayTitle = post.essayTitle;
     // let essayContent = post.essayContent;
     let essayContent = post.tuit;
-    let comment = post.comment;
-    let retweet = post.retweet;
-    let like = post.likes;
+    // let comment = post.comment;
+    // let retweet = post.retweet;
+    // let like = post.likes;
     //let liked = post.liked;
     //const _id = post._id;
 

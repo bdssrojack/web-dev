@@ -3,7 +3,7 @@ import {useDispatch} from "react-redux";
 import {createTuit} from "../../../actions/tuits_actions";
 
 const WhatsHappening = () => {
-    let [whatsHappening, setWhatsHappening] = useState('');
+    // let [whatsHappening, setWhatsHappening] = useState('');
     const [newTuit, setNewTuit] = useState({tuit: 'New tuit'});
     const dispatch = useDispatch();
 
