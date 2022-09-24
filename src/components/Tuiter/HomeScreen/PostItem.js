@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch} from "react-redux";
 import TuitStats from "./tuit-stats";
+import {deleteTuit, updateTuit} from "../../../actions/tuits_actions";
 
 const PostItem = ({
                       post = {
@@ -12,7 +13,7 @@ const PostItem = ({
                           image: "../../images/spaceman.png",
                           essayTitle: "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
                           essayContent: "From training to launch to landing,this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space. &#128279; netflix.com",
-                          comment: 0, retweet: 0, like: 0, liked: false
+                          comment: 0, retweet: 0, likes: 0, liked: false
                       }
                   }) => {
     let avatar = post.avatar;
@@ -22,18 +23,19 @@ const PostItem = ({
     let title = post.title;
     let image = post.image;
     let essayTitle = post.essayTitle;
-    let essayContent = post.essayContent;
+    // let essayContent = post.essayContent;
+    let essayContent = post.tuit;
     let comment = post.comment;
     let retweet = post.retweet;
-    let like = post.like;
+    let like = post.likes;
     //let liked = post.liked;
     //const _id = post._id;
 
     const dispatch = useDispatch();
-    const deleteTuit = (post) => {
-        dispatch({type: 'delete-tuit', post});
-        console.log("deleting post: "+post.essayContent);
-    };
+    // const deleteTuit = (post) => {
+    //     dispatch({type: 'delete-tuit', post});
+    //     console.log("deleting post: "+post.essayContent);
+    // };
 
     return (
         <li className="list-group-item">
@@ -42,7 +44,7 @@ const PostItem = ({
                     <img src={avatar} className="rounded-circle" height={"50px"} width={"50px"} alt={"avatar"}/>
                 </div>
                 <div className="col-11">
-                    <i onClick={() => deleteTuit(post)}
+                    <i onClick={() => deleteTuit(dispatch, post)}
                        className="fas fa-remove fa-pull-right"></i>
 
                     <span className="fw-bold">{username}</span>
@@ -70,7 +72,12 @@ const PostItem = ({
                         {/*<div className="col-3">*/}
                         {/*    <span className="text-muted">&#8682;</span>*/}
                         {/*</div>*/}
-                        <TuitStats tuit={post}></TuitStats>
+                        {/*<TuitStats tuit={post}></TuitStats>*/}
+                        Likes: {post.likes}
+                        <i onClick={() => updateTuit(dispatch, {
+                            ...post,
+                            likes: post.likes + 1
+                        })} className="far fa-thumbs-up ms-2"></i>
                     </div>
 
                 </div>

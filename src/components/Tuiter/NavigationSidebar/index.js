@@ -1,12 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
 
 const NavigationSidebar = ({active = ''}) => {
-    const label = useSelector(state => state.navi);
+    let label = useSelector(state => state.navi);
     const dispatch = useDispatch();
-    // let[newLabel, setNewLabel] = useState(label);
 
     return (
         <>

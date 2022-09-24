@@ -1,7 +1,21 @@
-import tuits from "../data/posts.json"
+// import tuits from "../data/posts.json"
+import {DELETE_TUIT, FIND_ALL_TUITS, CREATE_TUIT, UPDATE_TUIT} from "../../../actions/tuits_actions";
 
-const tuitsReducer = (state = tuits, action) => {
+const tuitsReducer = (state = [], action) => {
     switch (action.type) {
+        case FIND_ALL_TUITS:
+            return action.tuits;
+        case DELETE_TUIT:
+            return state.filter(tuit => tuit._id !== action.tuit._id);
+        case CREATE_TUIT:
+            return [
+                ...state,
+                action.newTuit
+            ];
+        case UPDATE_TUIT:
+            return state.map(
+                tuit => tuit._id === action.tuit._id ? action.tuit : tuit
+            );
         case 'create-tuit':
             const newTuit = {
                 _id: (new Date()).getTime() + '',
@@ -41,7 +55,7 @@ const tuitsReducer = (state = tuits, action) => {
 
             });
         default:
-            return tuits
+            return state;
     }
 }
 
